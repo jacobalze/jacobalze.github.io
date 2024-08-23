@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('Tests.json')
+  fetch('data.json')
     .then(response => response.json())
     .then(data => {
-      const preElement = document.getElementById('json-data');
-      preElement.textContent = JSON.stringify(data, null, 2); // Pretty-print JSON with 2-space indentation
+      const userList = document.getElementById('user-list');
+      data.users.forEach(user => {
+        const userDiv = document.createElement('div');
+        userDiv.className = 'user';
+        userDiv.innerHTML = `
+          <strong>Name:</strong> ${user.name}<br>
+          <strong>Age:</strong> ${user.age}<br>
+          <strong>City:</strong> ${user.city}
+        `;
+        userList.appendChild(userDiv);
+      });
     })
     .catch(error => console.error('Error fetching JSON:', error));
 });
