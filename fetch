@@ -1,0 +1,7 @@
+fetch('tests.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    // Use the JSON data here
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
