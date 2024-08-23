@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('data.json')
+  fetch('Tests.json')
     .then(response => response.json())
     .then(data => {
       const userList = document.getElementById('user-list');
