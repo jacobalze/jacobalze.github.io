@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+</head>
+<body>
+    <pre id="content">
+        <!-- The content of your data file will be displayed here -->
+    </pre>
+
+    <script>
+        fetch('data')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').textContent = text;
+            });
+    </script>
+</body>
+</html>
