@@ -1,2 +1,2 @@
-Display Warning on Home Screen (True or False): <displayWarning>False</displayWarning>
+Display Warning on Home Screen (True or False): <displayWarning>True</displayWarning>
 Warning content (custom message or NHC address for dynamic storm specific messages): <message>This is a test warning</message>
